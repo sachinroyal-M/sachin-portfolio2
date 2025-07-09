@@ -1,0 +1,46 @@
+/* Base Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Poppins', sans-serif; background:#1c1d25; color:#fff; overflow-x:hidden; }
+a { color:#2779a7; text-decoration:none; }
+.container { max-width:960px; margin:0 auto; padding:80px 20px; }
+
+/* Preloader */
+#preloader { position:fixed; inset:0; background:#1c1d25; display:flex; justify-content:space-around; align-items:center; z-index:9999; }
+.stripe { width:15%; height:5px; background:#2779a7; animation:load 1s infinite ease-in-out; }
+.stripe:nth-child(2) { animation-delay:0.2s; }
+.stripe:nth-child(3) { animation-delay:0.4s; }
+.stripe:nth-child(4) { animation-delay:0.6s; }
+@keyframes load { 0%,100% { height:5px; } 50% { height:20px; } }
+
+/* Background Shapes */
+.bg-shapes .shape { position:absolute; border-radius:50%; opacity:0.2; }
+.shape1 { width:200px; height:200px; background:#2779a7; top:20%; left:10%; }
+.shape2 { width:300px; height:300px; background:#934eeb; top:60%; left:80%; }
+.shape3 { width:150px; height:150px; background:#fb2576; top:80%; left:50%; }
+.shape4 { width:250px; height:250px; background:#08d9d6; top:40%; left:60%; }
+
+/* Hero */
+#hero { height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; }
+#hero h1 { font-size:3.5rem; }
+#hero p { margin-top:10px; font-size:1.2rem; color:#aaa; }
+
+/* Sections */
+section { padding:100px 0; position:relative; }
+h2 { font-size:2rem; margin-bottom:20px; position:relative; }
+h2::after { content:''; width:60px; height:4px; background:#2779a7; position:absolute; bottom:-10px; }
+
+/* Skills */
+.skills-list { display:flex; gap:1rem; flex-wrap:wrap; }
+.skills-list span { background:#2779a7; padding:10px 20px; border-radius:30px; transition:transform .3s; }
+.skills-list span:hover { transform:scale(1.1); }
+
+/* Projects */
+.project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; }
+.project-card { background:#2b2c33; overflow:hidden; position:relative; border-radius:12px; cursor:pointer; transition:transform .3s; }
+.project-card:hover { transform:translateY(-10px); }
+
+/* Contact & Footer */
+footer { text-align:center; padding:40px 0; font-size:.9rem; background:#17171b; }
+
+/* Responsive */
+@media(max-width:768px) { #hero h1 { font-size:2.5rem; } }
